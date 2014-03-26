@@ -1,9 +1,8 @@
 
 # [\#justnexuswarriorthings](http://zlsa.github.io/nexuswarrior/)
 
-I'm not even sure what this is a spoof on.
-
-ALL PRAISE LORD DUARTE
+I'm not entirely sure what this is a spoof on. Irregardless, ALL
+PRAISE LORD DUARTE.
 
 # Contributing
 
