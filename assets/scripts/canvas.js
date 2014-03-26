@@ -120,4 +120,7 @@ function canvas_update() {
   canvas_draw_image(cc);
   canvas_draw_text(cc);
   cc.restore();
+  $("#text-size").each(function() {
+    $(this).remove();
+  });
 }
