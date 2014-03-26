@@ -24,7 +24,7 @@ function input_init() {
     }
   },100000);
   
-  $("#output").on("contextmenu",function() {
+  $("#output").on("contextmenu mousedown dragstart",function() {
     console.log("convert");
     input_convert();
     return(true);
