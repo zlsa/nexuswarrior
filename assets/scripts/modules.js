@@ -8,6 +8,7 @@ var MODULES=[
 //  "load",
   "asset",
   "input",
+  "images",
   "canvas",
 ];
 

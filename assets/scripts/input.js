@@ -46,35 +46,6 @@ function input_init() {
 
 }
 
-function input_start() {
-
-  asset_load(new Asset({
-    name:"matias-nexus7",
-    url:"images/backdrops/matias-nexus7.png"
-  }));
-  prop.input.images.push(["matias-nexus7","Gizmodo"]);
-
-  asset_load(new Asset({
-    name:"pocket",
-    url:"images/backdrops/pocket.png"
-  }));
-  prop.input.images.push(["pocket","CNET"]);
-
-  asset_load(new Asset({
-    name:"back",
-    url:"images/backdrops/back.png"
-  }));
-  prop.input.images.push(["back","Phandroid"]);
-
-  asset_load(new Asset({
-    name:"hand",
-    url:"images/backdrops/hand.png"
-  }));
-  prop.input.images.push(["hand","CNET"]);
-  prop.input.images.push("hand");
-
-}
-
 function input_convert() {
   console.log(canvas_get("main"));
   var url=canvas_get("main").canvas.toDataURL();

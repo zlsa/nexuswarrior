@@ -52,7 +52,7 @@ function canvas_draw_text(cc) {
   cc.shadowOffsetY=1;
   var text=prop.input.text;
   if(text.length == 0)
-    text="Type in the box to spread Duarte's\n#HOLO teachings";
+    text="Sane defaults (type something)";
   var text=text.split("\n");
   var height=50;
   var offset=prop.canvas.size.height/2-50;
