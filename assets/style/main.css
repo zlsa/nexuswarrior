@@ -1,0 +1,27 @@
+
+@import "reset.css";
+@import "preview.css";
+@import "sidebar.css";
+
+html,body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+html {
+    background-color: #555;
+    font-family: "Roboto",sans-serif;
+    font-weight: bold;
+}
+
+#text-size {
+    display: inline-block;
+    white-space: pre;
+    width: auto;
+    position: absolute;
+    left: 1000%;
+    top: 0;
+    pointer-events: none;
+}
+
