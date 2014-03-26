@@ -9,4 +9,4 @@ PRAISE LORD DUARTE.
 Fork and request at will.
 
 * Adding images: see `assets/scripts/images.js`. 
-* Bugs: open an issue.
+* Bugs: open an issue. That's what they're for.

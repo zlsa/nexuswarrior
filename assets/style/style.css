@@ -10,6 +10,11 @@
     width: 50%;
     height: 3em;
     text-align: center;
+    user-select: none;
+}
+
+#styles .style:hover {
+    cursor: pointer;
 }
 
 #styles .style:nth-child(2n+0) {
