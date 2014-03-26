@@ -1,0 +1,24 @@
+
+#wrapper {
+    width: 640px;
+    position: absolute;
+    right: 35%;
+    top: 50%;
+    margin-right: -320px;
+    margin-top: -240px;
+}
+
+#canvases, #output {
+    display: block;
+    background-color: #ddd;
+    width: 640px;
+    height: 480px;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+
+#output {
+    opacity: 0;
+}
+

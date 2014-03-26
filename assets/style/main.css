@@ -1,5 +1,7 @@
 
 @import "reset.css";
+@import "preview.css";
+@import "sidebar.css";
 
 html,body {
     height: 100%;
@@ -13,29 +15,6 @@ html {
     font-weight: bold;
 }
 
-#wrapper {
-    width: 640px;
-    position: absolute;
-    right: 35%;
-    top: 50%;
-    margin-right: -320px;
-    margin-top: -240px;
-}
-
-#canvases, #output {
-    display: block;
-    background-color: #ddd;
-    width: 640px;
-    height: 480px;
-    right: 0;
-    top: 0;
-    position: absolute;
-}
-
-#output {
-    opacity: 0;
-}
-
 #text-size {
     display: inline-block;
     white-space: pre;
@@ -46,65 +25,3 @@ html {
     pointer-events: none;
 }
 
-#text {
-    border-bottom: 2px solid #33b5e5;
-    display: block;
-    background-color: #222;
-    box-shadow: 0 0 0 10px #222;
-    width: 100%;
-    border-radius: 1px;
-    resize: none;
-    color: #33b5e5;
-    font-weight: bold;
-    z-index: 1000;
-    position: relative;
-}
-
-#text textarea {
-    padding: 1em;
-    resize: none;
-    width: 100%;
-    height: 100%;
-}
-
-#text:before {
-    position: absolute;
-    border-left: 2px solid #33b5e5;
-    height: 12px;
-    width: 0;
-    display: block;
-    content: "";
-    left: 0;
-    bottom: 0;
-}
-
-#text:after {
-    position: absolute;
-    border-right: 2px solid #33b5e5;
-    height: 12px;
-    width: 0;
-    display: block;
-    content: "";
-    right: 0;
-    bottom: 0;
-}
-
-#help {
-    text-align: center;
-    color: #bebebe;
-    font-family: Roboto Condensed;
-    font-size: 80%;
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-}
-
-#sidebar {
-    background-color: #222;
-    padding: 1em;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 30%;
-}

@@ -50,7 +50,10 @@ function canvas_draw_text(cc) {
   cc.shadowBlur=6;
   cc.shadowOffsetX=0;
   cc.shadowOffsetY=1;
-  var text=prop.input.text.split("\n");
+  var text=prop.input.text;
+  if(text.length == 0)
+    text="Type in the box to spread Duarte's\n#HOLO teachings";
+  var text=text.split("\n");
   var height=50;
   var offset=prop.canvas.size.height/2-50;
   offset-=(text.length*height)/4;
@@ -63,11 +66,34 @@ function canvas_draw_text(cc) {
   var o=offset-height*0.8;
   var h=text.length*height;
   var p=5;
-  cc.fillStyle="rgba(0,0,0,0.7)";
+  var alpha=0.5;
+  switch(prop.input.style[1]) {
+  case "black":
+    cc.fillStyle="rgba(43,43,43,"+alpha+")";
+    break;
+  case "blue":
+    cc.fillStyle="rgba(51,181,229,"+alpha+")";
+    break;
+  case "gray":
+    cc.fillStyle="rgba(190,190,190,"+alpha+")";
+    break;
+  }
   cc.fillRect(f(prop.canvas.size.width/2-width/2-p),
               f(o-p),c(width+p*2),c(h+p*2));
 
-  cc.fillStyle="#33b5e5";
+//  cc.fillStyle=prop.input.style[0];
+  switch(prop.input.style[0]) {
+  case "black":
+    cc.fillStyle="rgba(43,43,43,1)";
+    break;
+  case "blue":
+    cc.fillStyle="rgba(51,181,229,1)";
+    break;
+  case "gray":
+    cc.fillStyle="rgba(190,190,190,1)";
+    break;
+  }
+//  cc.fillStyle="#33b5e5";
   cc.shadowColor="rgba(0,0,0,0.8)";
   for(var i=0;i<text.length;i++) {
     cc.fillText(text[i],prop.canvas.size.width/2,height*i+offset);
