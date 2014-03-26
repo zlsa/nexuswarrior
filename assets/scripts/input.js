@@ -12,9 +12,7 @@ function input_init() {
   prop.input.style=["blue","black"];
 
   $("#text textarea").keyup(function(e) {
-    prop.input.text=$("#text textarea").val();
-    canvas_update();
-    prop.input.dirty=true;
+    input_update();
   });
   
   setInterval(function() {
@@ -46,8 +44,27 @@ function input_init() {
 
 }
 
+function input_update() {
+  prop.input.text="";
+  var text=$("#text textarea").val();
+  var in_quotes=false;
+  for(var i=0;i<text.length;i++) {
+    var c=text[i];
+    console.log(c);
+    if(c == "\"") {
+      if(!in_quotes) c="“";
+      else c="”";
+      in_quotes=!in_quotes;
+    } else if(c == "'") {
+      c="’";
+    }
+    prop.input.text+=c;
+  }
+  canvas_update();
+  prop.input.dirty=true;
+}
+
 function input_convert() {
-  console.log(canvas_get("main"));
   var url=canvas_get("main").canvas.toDataURL();
   $("#output").get(0).src=url;
 }
@@ -60,7 +77,6 @@ function input_select(e) {
   // id=id.replace("blue","#33b5e5");
   // id=id.replace("gray","#bebebe");
   id=id.split("-");
-  console.log(id);
   prop.input.style=id;
   canvas_update();
 }
