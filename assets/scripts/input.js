@@ -33,14 +33,45 @@ function input_init() {
   $(".style").click(input_select);
   $("#style-blue-black").addClass("active");
 
+  prop.input.image=0;
+  prop.input.images=[];
+
+  $("#previous-image").click(function() {
+    input_select_image(-1);
+  });
+
+  $("#next-image").click(function() {
+    input_select_image(1);
+  });
+
 }
 
 function input_start() {
 
   asset_load(new Asset({
     name:"matias-nexus7",
-    url:"images/matias-nexus7.png"
+    url:"images/backdrops/matias-nexus7.png"
   }));
+  prop.input.images.push(["matias-nexus7","Gizmodo"]);
+
+  asset_load(new Asset({
+    name:"pocket",
+    url:"images/backdrops/pocket.png"
+  }));
+  prop.input.images.push(["pocket","CNET"]);
+
+  asset_load(new Asset({
+    name:"back",
+    url:"images/backdrops/back.png"
+  }));
+  prop.input.images.push(["back","Phandroid"]);
+
+  asset_load(new Asset({
+    name:"hand",
+    url:"images/backdrops/hand.png"
+  }));
+  prop.input.images.push(["hand","CNET"]);
+  prop.input.images.push("hand");
 
 }
 
@@ -60,5 +91,11 @@ function input_select(e) {
   id=id.split("-");
   console.log(id);
   prop.input.style=id;
+  canvas_update();
+}
+
+function input_select_image(offset) {
+  prop.input.image+=offset;
+  prop.input.image=prop.input.image.mod(prop.input.images.length-1);
   canvas_update();
 }

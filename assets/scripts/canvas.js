@@ -41,7 +41,7 @@ function canvas_clear(cc) {
 }
 
 function canvas_draw_image(cc) {
-  cc.drawImage(asset_get("matias-nexus7").data,0,0);
+  cc.drawImage(asset_get(prop.input.images[prop.input.image][0]).data,0,0);
 }
 
 function canvas_draw_text(cc) {
@@ -99,14 +99,18 @@ function canvas_draw_text(cc) {
     cc.fillText(text[i],prop.canvas.size.width/2,height*i+offset);
   }
   cc.fillStyle="#fff";
+  cc.shadowBlur=4;
+  cc.shadowOffsetY=0;
   cc.font="20px Roboto Slab";
   cc.fillText("#justnexuswarriorthings",prop.canvas.size.width/2,
               prop.canvas.size.height-100);
   cc.font="12px Roboto Condensed";
-  cc.shadowBlur=4;
   p=5;
-  cc.fillText("http://zlsa.github.io/nexuswarrior/",prop.canvas.size.width/2,
-              prop.canvas.size.height-p);
+  cc.textAlign="left";
+  cc.fillText("http://zlsa.github.io/nexuswarrior/",p,prop.canvas.size.height-p);
+  cc.textAlign="right";
+  cc.fillText("Image copyright "+prop.input.images[prop.input.image][1],
+              prop.canvas.size.width-p,prop.canvas.size.height-p);
 }
 
 function canvas_update() {

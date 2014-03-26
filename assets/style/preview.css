@@ -22,3 +22,38 @@
     opacity: 0;
 }
 
+#previous-image,
+#next-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    font-size: 400%;
+    width: 64px;
+    color: #bebebe;
+    z-index: 10000;
+    padding: 0 50px;
+    text-shadow: 0 0 2px #2b2b2b;
+    user-select: none;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+#previous-image:hover, #next-image:hover {
+    background-color: rgba(255,255,255,0.1);
+    cursor: pointer;
+}
+
+#previous-image:active, #next-image:active {
+    background-color: rgba(0,0,0,0.2);
+}
+
+#previous-image {
+    left: 30%;
+    background-image: url("../images/icons/left.png");
+}
+
+#next-image {
+    right: 0;
+    background-image: url("../images/icons/right.png");
+}
