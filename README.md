@@ -8,12 +8,20 @@ PRAISE LORD DUARTE.
 
 Fork and request at will.
 
-* Adding images: see `assets/scripts/images.js`. 
+* Adding images: see `assets/scripts/images.js`.
 * Bugs: open an issue. That's what they're for.
 
-# License
+# Forking and deriviatives
 
-**WTFPL**
+This project is licensed under the WTFPL (see the license text
+below). You can do whatever the f*ck you want without any attribution,
+share-alike, payment, or notice required.
+
+If you release a modified version of this, could you send me a link?
+I'd like to see what you come up with. (Not required at all, but I'm
+just curious... :)
+
+# License (WTFPL)
 
 ````
         DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
