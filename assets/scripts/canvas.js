@@ -109,8 +109,9 @@ function canvas_draw_text(cc) {
   cc.textAlign="left";
   cc.fillText("http://zlsa.github.io/nexuswarrior/",p,prop.canvas.size.height-p);
   cc.textAlign="right";
-  cc.fillText("Image copyright "+prop.input.images[prop.input.image][1],
-              prop.canvas.size.width-p,prop.canvas.size.height-p);
+  if(prop.input.images[prop.input.image][1] != null)
+    cc.fillText("Image copyright "+prop.input.images[prop.input.image][1],
+                prop.canvas.size.width-p,prop.canvas.size.height-p);
 }
 
 function canvas_update() {

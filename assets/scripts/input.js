@@ -8,19 +8,16 @@ function input_init() {
   prop.input={};
   prop.input.text="";
   prop.input.image=0;
+  if("nexuswarrior-last-image" in localStorage) {
+    prop.input.image=parseInt(localStorage["nexuswarrior-last-image"]);
+//    input_select_image(); // to ensure we don't go beyond bounds
+  }
   prop.input.dirty=false;
   prop.input.style=["blue","black"];
 
   $("#text textarea").keyup(function(e) {
     input_update();
   });
-  
-  setInterval(function() {
-    if(prop.input.dirty) {
-      prop.input.dirty=false;
-      input_convert();
-    }
-  },100000);
   
   $("#output").on("contextmenu mousedown dragstart",function() {
     console.log("convert");
@@ -31,7 +28,6 @@ function input_init() {
   $(".style").click(input_select);
   $("#style-blue-black").addClass("active");
 
-  prop.input.image=0;
   prop.input.images=[];
 
   $("#previous-image").click(function() {
@@ -85,4 +81,5 @@ function input_select_image(offset) {
   prop.input.image+=offset;
   prop.input.image=prop.input.image.mod(prop.input.images.length);
   canvas_update();
+  localStorage["nexuswarrior-last-image"]=prop.input.image;
 }
