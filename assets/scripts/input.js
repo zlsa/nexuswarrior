@@ -67,6 +67,6 @@ function input_select(e) {
 
 function input_select_image(offset) {
   prop.input.image+=offset;
-  prop.input.image=prop.input.image.mod(prop.input.images.length-1);
+  prop.input.image=prop.input.image.mod(prop.input.images.length);
   canvas_update();
 }
