@@ -66,7 +66,7 @@ function canvas_draw_text(cc) {
   var o=offset-height*0.8;
   var h=text.length*height;
   var p=5;
-  var alpha=0.5;
+  var alpha=0.7;
   switch(prop.input.style[1]) {
   case "black":
     cc.fillStyle="rgba(43,43,43,"+alpha+")";
