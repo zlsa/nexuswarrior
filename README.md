@@ -1,4 +1,3 @@
-
 # [\#justnexuswarriorthings](http://zlsa.github.io/nexuswarrior/)
 
 I'm not entirely sure what this is a spoof on. Irregardless, ALL
@@ -20,6 +19,10 @@ share-alike, payment, or notice required.
 If you release a modified version of this, could you send me a link?
 I'd like to see what you come up with. (Not required at all, but I'm
 just curious... :)
+
+# Contact
+
+zlsa@outlook.com
 
 # License (WTFPL)
 
