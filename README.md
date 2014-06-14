@@ -7,7 +7,7 @@ PRAISE LORD DUARTE.
 
 Fork and request at will.
 
-* Adding images: see `assets/scripts/images.js`.
+* Adding images: see `assets/scripts/images.js`. Images should be 640x480 pixels.
 * Bugs: open an issue. That's what they're for.
 
 # Forking and deriviatives
